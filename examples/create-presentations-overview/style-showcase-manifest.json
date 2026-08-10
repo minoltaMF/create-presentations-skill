@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "create-presentations-manifest-v1",
+  "title": "Create Presentations Style Showcase",
+  "slideCount": 16,
+  "routes": ["visual_pptx"],
+  "models": {
+    "planning": "create-presentations-workflow",
+    "image": "openai-builtin-imagegen-model-id-not-surfaced"
+  },
+  "cost": {
+    "currency": "USD",
+    "actual": 0,
+    "hardLimit": 1
+  },
+  "slides": [
+    { "id": "slide-01", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/01-creator-paper-editorial.png" },
+    { "id": "slide-02", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/02-cinematic-noir.png" },
+    { "id": "slide-03", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/03-swiss-signal.png" },
+    { "id": "slide-04", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/04-scientific-blueprint.png" },
+    { "id": "slide-05", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/05-executive-data-story.png" },
+    { "id": "slide-06", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/06-product-launch.png" },
+    { "id": "slide-07", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/07-eink-editorial.png" },
+    { "id": "slide-08", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/08-warm-craft.png" },
+    { "id": "slide-09", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/09-handdrawn-technical.png" },
+    { "id": "slide-10", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/10-photo-documentary.png" },
+    { "id": "slide-11", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/11-botanical-research.png" },
+    { "id": "slide-12", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/12-ink-jade.png" },
+    { "id": "slide-13", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/13-retro-analog.png" },
+    { "id": "slide-14", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/14-radical-monochrome.png" },
+    { "id": "slide-15", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/15-creative-voltage.png" },
+    { "id": "slide-16", "status": "passed", "attempts": 1, "output": "../../assets/style-gallery/16-adult-explainer.png" }
+  ],
+  "outputs": [
+    {
+      "route": "visual_pptx",
+      "path": "create-presentations-style-showcase.pptx",
+      "sha256": "d666ae15bb6701f47cd8c508cb49fdd7f47ca5e7d6031894bb4982d97d7ceb2c",
+      "byteSize": 30359712
+    }
+  ]
+}

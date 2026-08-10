@@ -61,6 +61,8 @@ Define one deck-level system:
 
 Offer two or three materially different directions only when the user has not supplied one. Once selected, stop showing the full catalog and focus on the result.
 
+Use the bundled style-gallery contact sheet for discovery. A valid alternative changes composition, typography, image treatment, and emotional tone; a palette swap alone is not another direction.
+
 ## 6. Representative sample
 
 Generate one representative page when visual ambiguity or paid-generation risk is meaningful. The sample should exercise the hardest combination of typography, imagery, and structure—not merely the easiest cover page.

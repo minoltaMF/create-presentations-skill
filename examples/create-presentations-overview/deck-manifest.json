@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "create-presentations-manifest-v1",
+  "title": "Create Presentations",
+  "slideCount": 10,
+  "routes": ["hybrid_pptx", "html"],
+  "models": {
+    "planning": "create-presentations-workflow",
+    "image": "openai-builtin-imagegen-model-id-not-surfaced"
+  },
+  "cost": {
+    "currency": "USD",
+    "actual": 0,
+    "hardLimit": 1
+  },
+  "slides": [
+    { "id": "slide-01", "status": "passed", "attempts": 1, "output": "renders/slide-01.png" },
+    { "id": "slide-02", "status": "passed", "attempts": 0, "output": "renders/slide-02.png" },
+    { "id": "slide-03", "status": "passed", "attempts": 0, "output": "renders/slide-03.png" },
+    { "id": "slide-04", "status": "passed", "attempts": 0, "output": "renders/slide-04.png" },
+    { "id": "slide-05", "status": "passed", "attempts": 0, "output": "renders/slide-05.png" },
+    { "id": "slide-06", "status": "passed", "attempts": 16, "output": "renders/slide-06.png" },
+    { "id": "slide-07", "status": "passed", "attempts": 0, "output": "renders/slide-07.png" },
+    { "id": "slide-08", "status": "passed", "attempts": 0, "output": "renders/slide-08.png" },
+    { "id": "slide-09", "status": "passed", "attempts": 0, "output": "renders/slide-09.png" },
+    { "id": "slide-10", "status": "passed", "attempts": 0, "output": "renders/slide-10.png" }
+  ],
+  "outputs": [
+    {
+      "route": "hybrid_pptx",
+      "path": "create-presentations-overview.pptx",
+      "sha256": "41b6f44e5e5385445e3e5792968919bc880d70c8fc1f989827807adb9693611d",
+      "byteSize": 4427939
+    },
+    {
+      "route": "html",
+      "path": "create-presentations-overview.html",
+      "sha256": "9702af91fa2b858c5713cd9d103ad1fc33a259f596334e5f707de133acdcd582",
+      "byteSize": 5879660
+    }
+  ]
+}

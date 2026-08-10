@@ -17,24 +17,29 @@ Specify:
 
 ## Style families
 
-Use these as starting families, then adapt them to the topic and audience:
+Use these as starting families, then adapt them to the topic and audience. When the bundled `assets/style-gallery.png` is available, inspect it before presenting choices.
 
-- editorial paper;
-- cinematic visual narrative;
-- clean professional;
-- consulting/data story;
-- scientific/technical;
-- classroom/explainer;
-- hand-drawn whiteboard;
-- retro editorial;
-- warm craft;
-- bold poster;
-- minimal monochrome;
-- product launch;
+- creator paper editorial;
+- cinematic noir;
+- Swiss signal poster;
+- scientific blueprint;
+- executive data story;
+- premium product launch;
+- e-ink editorial;
+- warm craft collage;
+- hand-drawn technical explainer;
 - photographic documentary;
+- botanical research editorial;
+- contemporary ink and jade;
+- retro analog;
+- radical monochrome;
+- creative voltage;
+- adult classroom explainer;
 - brand-template faithful.
 
 Do not present near-duplicate styles as separate choices. A useful option must differ in composition, typography, image treatment, and emotional tone.
+
+When no style is supplied, shortlist no more than three materially different families and recommend one. Use the full gallery for discovery, not as a mandatory confirmation wall in every task.
 
 ## Page-role variety
 

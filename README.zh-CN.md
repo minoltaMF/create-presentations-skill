@@ -2,7 +2,7 @@
 
 **一个与 Provider 无关、可跨 Agent 使用的专业演示文稿 Skill。**
 
-[English](README.md) · [完整流程](docs/WORKFLOW.md) · [案例](examples/ai-fde-career/README.md) · [参考来源](docs/INFLUENCES.md)
+[English](README.md) · [完整流程](docs/WORKFLOW.md) · [风格样册](docs/STYLE_GALLERY.md) · [完整案例](examples/create-presentations-overview/README.md) · [参考来源](docs/INFLUENCES.md)
 
 ![Create Presentations Demo](assets/readme/demo-hero.png)
 
@@ -23,6 +23,24 @@
 | **HTML** | 便携、互动或浏览器演示 | HTML 演示 |
 
 ![路线对比](assets/readme/route-comparison.png)
+
+## 同一主题，16 种视觉系统
+
+所有样张都使用相同主题与相同短文案，只改变构图、排版、图像处理和情绪。它们是为本仓库生成的原创整页 PPT 图片，不是从公开模板中复制的截图。
+
+[![Create Presentations 十六种风格样张](assets/readme/style-gallery.png)](docs/STYLE_GALLERY.md)
+
+| Creator Paper 编辑风 | 电影黑色叙事 |
+| --- | --- |
+| [![Creator Paper](assets/style-gallery/01-creator-paper-editorial.png)](assets/style-gallery/01-creator-paper-editorial.png) | [![Cinematic Noir](assets/style-gallery/02-cinematic-noir.png)](assets/style-gallery/02-cinematic-noir.png) |
+| 科学蓝图 | 温暖手作 |
+| [![Scientific Blueprint](assets/style-gallery/04-scientific-blueprint.png)](assets/style-gallery/04-scientific-blueprint.png) | [![Warm Craft](assets/style-gallery/08-warm-craft.png)](assets/style-gallery/08-warm-craft.png) |
+| 摄影纪实 | 水墨与玉 |
+| [![Photo Documentary](assets/style-gallery/10-photo-documentary.png)](assets/style-gallery/10-photo-documentary.png) | [![Ink and Jade](assets/style-gallery/12-ink-jade.png)](assets/style-gallery/12-ink-jade.png) |
+| 复古模拟 | 创意电压 |
+| [![Retro Analog](assets/style-gallery/13-retro-analog.png)](assets/style-gallery/13-retro-analog.png) | [![Creative Voltage](assets/style-gallery/15-creative-voltage.png)](assets/style-gallery/15-creative-voltage.png) |
+
+[完整风格样册](docs/STYLE_GALLERY.md)说明了全部 16 种风格的适用场景、视觉 DNA、生成证据和选择方法。还可以直接下载 [16 页 Visual Locked 风格 PPTX](examples/create-presentations-overview/create-presentations-style-showcase.pptx)，全屏查看每张原始图片。
 
 ## 安装
 
@@ -53,8 +71,8 @@ npx -y skills@latest add minoltaMF/create-presentations-skill --list
 ## 快速使用
 
 ```text
-使用 $create-presentations，制作一套“如何转型 AI FDE 工程师”的 12 页课程宣传 PPT。
-使用 Claude 整理叙事，gpt-image-2 先生成一页视觉样张。
+使用 $create-presentations，制作一套 12 页产品发布 PPT。
+使用 Claude 整理叙事，使用已配置的图片模型先生成一页视觉样张。
 最终交付高保真 Visual PPTX、可编辑 Hybrid PPTX 和 PDF。
 ```
 
@@ -87,17 +105,18 @@ npx -y skills@latest add minoltaMF/create-presentations-skill --list
 
 ## 完整案例和素材包
 
-仓库提供了一个完整的 [AI FDE 转型演示案例](examples/ai-fde-career/README.md)，包含：
+仓库提供一个完整的 [Create Presentations 自指涉案例](examples/create-presentations-overview/README.md)，它直接使用本 Skill 的方法来解释本 Skill，包含：
 
 - Presentation Brief；
 - 逐页叙事计划；
 - 来源台账；
-- 可下载 PPTX；
-- HTML 演示；
+- 10 页可编辑/Hybrid PPTX；
+- 16 页 Visual Locked 风格样册 PPTX；
+- 单文件 HTML 演示；
 - 页面预览图与联系表；
 - 交付 Manifest。
 
-![AI FDE 示例联系表](examples/ai-fde-career/contact-sheet.png)
+![Create Presentations 示例联系表](examples/create-presentations-overview/contact-sheet.png)
 
 安装包内还提供 Brief、页面计划、可见文案、来源台账和 QA 清单模板，可以直接复制到新项目。
 

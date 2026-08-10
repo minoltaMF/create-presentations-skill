@@ -26,10 +26,15 @@ REQUIRED = [
     SKILL / "assets" / "page-plan-template.md",
     ROOT / "assets" / "readme" / "demo-hero.png",
     ROOT / "assets" / "readme" / "route-comparison.png",
-    ROOT / "examples" / "ai-fde-career" / "ai-fde-career-demo.pptx",
-    ROOT / "examples" / "ai-fde-career" / "ai-fde-career-demo.html",
-    ROOT / "examples" / "ai-fde-career" / "contact-sheet.png",
-    ROOT / "examples" / "ai-fde-career" / "deck-manifest.json",
+    ROOT / "assets" / "readme" / "style-gallery.png",
+    SKILL / "assets" / "style-gallery.png",
+    ROOT / "docs" / "STYLE_GALLERY.md",
+    ROOT / "examples" / "create-presentations-overview" / "create-presentations-overview.pptx",
+    ROOT / "examples" / "create-presentations-overview" / "create-presentations-style-showcase.pptx",
+    ROOT / "examples" / "create-presentations-overview" / "create-presentations-overview.html",
+    ROOT / "examples" / "create-presentations-overview" / "contact-sheet.png",
+    ROOT / "examples" / "create-presentations-overview" / "deck-manifest.json",
+    ROOT / "examples" / "create-presentations-overview" / "style-showcase-manifest.json",
 ]
 
 
@@ -91,8 +96,11 @@ def main() -> int:
                 fail(f"possible secret in {path.relative_to(ROOT)}", errors)
 
     validator = SKILL / "scripts" / "validate_deck_manifest.py"
-    manifest = ROOT / "examples" / "ai-fde-career" / "deck-manifest.json"
-    for args in (["--self-test"], [str(manifest)]):
+    manifests = [
+        ROOT / "examples" / "create-presentations-overview" / "deck-manifest.json",
+        ROOT / "examples" / "create-presentations-overview" / "style-showcase-manifest.json",
+    ]
+    for args in (["--self-test"], *([str(manifest)] for manifest in manifests)):
         result = subprocess.run(
             [sys.executable, str(validator), *args],
             cwd=ROOT,
@@ -103,7 +111,9 @@ def main() -> int:
         if result.returncode != 0:
             fail(f"manifest validator failed for {' '.join(args)}: {result.stderr.strip()}", errors)
 
-    if manifest.exists():
+    for manifest in manifests:
+        if not manifest.exists():
+            continue
         payload = json.loads(manifest.read_text(encoding="utf-8"))
         for output in payload.get("outputs", []):
             output_path = manifest.parent / output.get("path", "")
@@ -117,9 +127,20 @@ def main() -> int:
             if output.get("sha256") != actual_sha:
                 fail(f"manifest sha256 mismatch for {output_path.relative_to(ROOT)}", errors)
 
-    pptx = ROOT / "examples" / "ai-fde-career" / "ai-fde-career-demo.pptx"
-    if pptx.exists() and pptx.read_bytes()[:2] != b"PK":
-        fail("example PPTX does not have an OOXML ZIP signature", errors)
+    pptx_files = [
+        ROOT / "examples" / "create-presentations-overview" / "create-presentations-overview.pptx",
+        ROOT / "examples" / "create-presentations-overview" / "create-presentations-style-showcase.pptx",
+    ]
+    for pptx in pptx_files:
+        if pptx.exists() and pptx.read_bytes()[:2] != b"PK":
+            fail(f"{pptx.relative_to(ROOT)} does not have an OOXML ZIP signature", errors)
+
+    style_assets = sorted((ROOT / "assets" / "style-gallery").glob("[0-9][0-9]-*.png"))
+    if len(style_assets) != 16:
+        fail(f"expected 16 numbered style assets; found {len(style_assets)}", errors)
+    for image in style_assets:
+        if image.read_bytes()[:8] != b"\x89PNG\r\n\x1a\n":
+            fail(f"{image.relative_to(ROOT)} does not have a PNG signature", errors)
 
     if errors:
         print("Repository validation failed:", file=sys.stderr)

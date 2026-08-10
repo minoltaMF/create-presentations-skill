@@ -2,7 +2,7 @@
 
 **A provider-neutral Agent Skill for planning, designing, building, reviewing, and delivering presentations.**
 
-[中文说明](README.zh-CN.md) · [Workflow](docs/WORKFLOW.md) · [Examples](examples/ai-fde-career/README.md) · [Influences](docs/INFLUENCES.md)
+[中文说明](README.zh-CN.md) · [Workflow](docs/WORKFLOW.md) · [Style gallery](docs/STYLE_GALLERY.md) · [Worked example](examples/create-presentations-overview/README.md) · [Influences](docs/INFLUENCES.md)
 
 ![Create Presentations demo](assets/readme/demo-hero.png)
 
@@ -19,6 +19,24 @@ The skill does not lock you into one provider or one output style. It helps the 
 | **HTML** | Portable or interactive presentations | Browser-first HTML |
 
 ![Route comparison](assets/readme/route-comparison.png)
+
+## Sixteen visual systems, one brief
+
+The gallery holds the content constant and changes composition, typography, image treatment, and emotional tone. These are original full-slide image-generation outputs—not screenshots copied from public templates.
+
+[![Sixteen Create Presentations style studies](assets/readme/style-gallery.png)](docs/STYLE_GALLERY.md)
+
+| Creator Paper Editorial | Cinematic Noir |
+| --- | --- |
+| [![Creator Paper Editorial](assets/style-gallery/01-creator-paper-editorial.png)](assets/style-gallery/01-creator-paper-editorial.png) | [![Cinematic Noir](assets/style-gallery/02-cinematic-noir.png)](assets/style-gallery/02-cinematic-noir.png) |
+| Scientific Blueprint | Warm Craft |
+| [![Scientific Blueprint](assets/style-gallery/04-scientific-blueprint.png)](assets/style-gallery/04-scientific-blueprint.png) | [![Warm Craft](assets/style-gallery/08-warm-craft.png)](assets/style-gallery/08-warm-craft.png) |
+| Photo Documentary | Ink & Jade |
+| [![Photo Documentary](assets/style-gallery/10-photo-documentary.png)](assets/style-gallery/10-photo-documentary.png) | [![Ink and Jade](assets/style-gallery/12-ink-jade.png)](assets/style-gallery/12-ink-jade.png) |
+| Retro Analog | Creative Voltage |
+| [![Retro Analog](assets/style-gallery/13-retro-analog.png)](assets/style-gallery/13-retro-analog.png) | [![Creative Voltage](assets/style-gallery/15-creative-voltage.png)](assets/style-gallery/15-creative-voltage.png) |
+
+See the [complete style gallery](docs/STYLE_GALLERY.md) for all sixteen families, intended use, visual DNA, generation provenance, and selection guidance. The downloadable [Visual Locked style showcase](examples/create-presentations-overview/create-presentations-style-showcase.pptx) places every original image on its own full-slide PPTX page.
 
 ## Why this skill
 
@@ -131,9 +149,9 @@ The installable Skill contains:
 - `scripts/validate_deck_manifest.py` — deterministic, provider-free delivery manifest validation;
 - `agents/openai.yaml` — Codex UI metadata.
 
-The repository also includes a complete [AI FDE career example](examples/ai-fde-career/README.md) with a Brief, page plan, source ledger, manifest, PPTX, HTML sample, slide renders, and contact sheet.
+The repository also includes a complete [Create Presentations worked example](examples/create-presentations-overview/README.md), built with the Skill's own Brief, page-plan, Design DNA, route-selection, visible-copy, and QA logic. It includes editable/Hybrid PPTX, a 16-page Visual Locked style-showcase PPTX, a self-contained HTML presentation, manifests, renders, and source evidence.
 
-![AI FDE example contact sheet](examples/ai-fde-career/contact-sheet.png)
+![Create Presentations example contact sheet](examples/create-presentations-overview/contact-sheet.png)
 
 ## Repository structure
 
@@ -145,8 +163,9 @@ create-presentations-skill/
 │   ├── assets/
 │   ├── references/
 │   └── scripts/
-├── examples/ai-fde-career/        # complete worked example
-├── assets/readme/                  # README demo visuals
+├── examples/create-presentations-overview/ # self-referential worked example
+├── assets/style-gallery/           # 16 original full-slide style studies
+├── assets/readme/                  # README demos and gallery montage
 ├── docs/                           # public documentation
 └── scripts/validate_repo.py        # repository-level checks
 ```

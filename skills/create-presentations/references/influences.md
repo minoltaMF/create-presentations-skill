@@ -10,6 +10,12 @@ This skill is an original, provider-neutral workflow. It combines reviewed patte
 - **Bento** — MIT, https://github.com/nyblnet/bento
   - Retain portable single-file HTML and presenter interaction ideas.
   - Do not bundle its editor, CRDT, relay, updater, or file-permission runtime.
+- **Frontend Slides** — MIT, https://github.com/zarazhangrui/frontend-slides
+  - Retain the practice of comparing materially different visual previews and describing repeatable Design DNA.
+  - Do not copy its templates, runtime, or gallery screenshots.
+- **ppt-agent-skill** — MIT, https://github.com/Akxan/ppt-agent-skill
+  - Retain broad style-family coverage, suitability mapping, and explicit failure constraints.
+  - Do not copy its style mocks, brand imitations, runtime, or prompt files.
 - **PptxGenJS and native presentation tooling**
   - Retain deterministic editable text, tables, charts, notes, and template assembly.
 - **Template-following and Artifact Tool workflows**

@@ -42,6 +42,19 @@ Generate one representative page first, then regenerate only failed pages.
 Hard cost limit: USD ___. No automatic paid retry.
 ```
 
+## Compare visual directions
+
+```text
+Use $create-presentations and inspect the bundled style gallery.
+Keep the subject, visible copy, aspect ratio, and page role identical.
+Propose no more than three materially different directions for this audience.
+Each direction must differ in composition, typography, image treatment, and tone—not only palette.
+Generate one representative slide per direction, record the prompt and backend,
+then recommend one Design DNA for the full deck.
+```
+
+The public repository includes sixteen original comparisons under `assets/style-gallery/` and a downloadable Visual Locked style-showcase PPTX.
+
 ## Editable Hybrid deck
 
 ```text

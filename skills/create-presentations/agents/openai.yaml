@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Presentations"
+  short_description: "Plan, build, review, and deliver polished slide decks"
+  default_prompt: "Use $create-presentations to turn my materials into a polished presentation and choose the right editable or visual delivery route."

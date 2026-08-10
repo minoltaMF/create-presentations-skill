@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Become an AI FDE — Create Presentations example</title>
+  <style>
+    :root { --paper:#f6f2e9; --ink:#17202b; --muted:#667080; --blue:#1468e8; --amber:#efb340; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#111820; color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, sans-serif; }
+    main { scroll-snap-type:y mandatory; height:100vh; overflow-y:auto; }
+    section { width:100vw; height:100vh; padding:8vh 8vw; background:var(--paper); scroll-snap-align:start; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; }
+    section:nth-child(even) { background:#eef3fa; }
+    .eyebrow { color:var(--blue); letter-spacing:.18em; text-transform:uppercase; font-size:1.1vw; font-weight:750; }
+    h1 { font-size:6.7vw; max-width:9.5em; line-height:.96; margin:.18em 0; letter-spacing:-.055em; }
+    h2 { font-size:4.5vw; max-width:13em; line-height:1.02; margin:.18em 0 .55em; letter-spacing:-.045em; }
+    p { font-size:1.7vw; line-height:1.45; max-width:44em; color:var(--muted); }
+    .path { display:grid; grid-template-columns:repeat(4,1fr); gap:2vw; margin-top:4vh; }
+    .path div { border-top:4px solid var(--blue); padding-top:1.2vw; font-size:2vw; font-weight:720; }
+    .path small { display:block; margin-top:.8em; font-size:1.1vw; line-height:1.45; color:var(--muted); font-weight:450; }
+    .lanes { display:grid; grid-template-columns:repeat(3,1fr); gap:2vw; }
+    .lane { border-left:4px solid var(--amber); padding-left:1.5vw; }
+    .lane strong { font-size:2.2vw; }
+    .lane p { font-size:1.25vw; }
+    .steps { display:flex; align-items:flex-start; gap:1.4vw; margin-top:5vh; }
+    .step { flex:1; }
+    .step b { display:grid; place-items:center; width:3.5vw; height:3.5vw; border-radius:50%; background:var(--blue); color:white; font-size:1.35vw; }
+    .step h3 { font-size:1.55vw; margin:.8em 0 .3em; }
+    .step p { font-size:1.05vw; }
+    .final { background:var(--ink); color:white; }
+    .final p { color:#c8d0da; }
+    footer { position:absolute; bottom:3.5vh; right:4vw; color:#87919f; font-size:.9vw; }
+    @media (max-width: 800px) { .path,.lanes { grid-template-columns:1fr 1fr; } .steps { flex-wrap:wrap; } .step { min-width:28%; } }
+  </style>
+</head>
+<body>
+<main>
+  <section><div class="eyebrow">Create Presentations · Example</div><h1>Become an AI FDE</h1><p>Own the path from ambiguity to adoption.</p><footer>01</footer></section>
+  <section><div class="eyebrow">The role</div><h2>Join four kinds of work into one outcome</h2><div class="path"><div>Discover<small>Frame the business problem with the people who feel it.</small></div><div>Prototype<small>Turn uncertainty into something users can react to.</small></div><div>Integrate<small>Connect models, data, systems, and operating constraints.</small></div><div>Enable adoption<small>Make the new workflow trustworthy and repeatable.</small></div></div><footer>02</footer></section>
+  <section><div class="eyebrow">Your starting point</div><h2>Build from the strength you already have</h2><div class="lanes"><div class="lane"><strong>Product</strong><p>Turn discovery and prioritization into executable AI workflows.</p></div><div class="lane"><strong>Engineering</strong><p>Connect prototypes to reliable systems and user outcomes.</p></div><div class="lane"><strong>Business</strong><p>Translate domain judgment into requirements, evaluation, and adoption.</p></div></div><footer>03</footer></section>
+  <section><div class="eyebrow">Evidence</div><h2>Build one real workflow, end to end</h2><div class="steps"><div class="step"><b>1</b><h3>Problem</h3><p>Observe the work.</p></div><div class="step"><b>2</b><h3>Prototype</h3><p>Create a testable loop.</p></div><div class="step"><b>3</b><h3>Integrate</h3><p>Use real constraints.</p></div><div class="step"><b>4</b><h3>Feedback</h3><p>Watch people use it.</p></div><div class="step"><b>5</b><h3>Adoption</h3><p>Measure the changed behavior.</p></div></div><footer>04</footer></section>
+  <section><div class="eyebrow">30 days</div><h2>Observe. Build. Ship. Teach.</h2><p>Use one week for each motion. The goal is not a perfect demo—it is credible evidence that you can own the path between a real problem and a working new habit.</p><footer>05</footer></section>
+  <section class="final"><div class="eyebrow">Start here</div><h1>Choose the problem you are willing to own</h1><p>One workflow. One user group. One measurable outcome.</p><footer>06</footer></section>
+</main>
+</body>
+</html>

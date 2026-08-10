@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "create-presentations-manifest-v1",
+  "title": "Replace with deck title",
+  "slideCount": 1,
+  "routes": ["native_pptx"],
+  "models": {
+    "planning": "configured-text-model",
+    "image": "not-used"
+  },
+  "cost": {
+    "currency": "USD",
+    "actual": 0,
+    "hardLimit": 1
+  },
+  "slides": [
+    {
+      "id": "slide-01",
+      "status": "passed",
+      "attempts": 0,
+      "output": "renders/slide-01.png"
+    }
+  ],
+  "outputs": [
+    {
+      "route": "native_pptx",
+      "path": "deck.pptx",
+      "sha256": "replace-after-export",
+      "byteSize": 1
+    }
+  ]
+}

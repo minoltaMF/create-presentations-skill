@@ -24,6 +24,10 @@
 
 ![路线对比](assets/readme/route-comparison.png)
 
+在 Codex 中，本地 PPTX 创建与模板跟随直接使用宿主提供的 Artifact Tool 运行时。Visual 与图片密集型 Hybrid 路线可以记录已确认样张、唯一生图后端、稳定的逐页状态和 QA 证据，而不再叠加另一套演示文稿编排器。
+
+Native PPTX 进一步分为两个新建档位：普通可编辑演示默认走 **Fast Native**；只有品牌、矢量或复杂排版确实需要时才升级为 **Quality Native**。互动 HTML 继续作为明确的浏览器优先选项；由它导出的整页图片 PPTX 必须标注为不可编辑。
+
 ## 同一主题，16 种视觉系统
 
 所有样张都使用相同主题与相同短文案，只改变构图、排版、图像处理和情绪。它们是为本仓库生成的原创整页 PPT 图片，不是从公开模板中复制的截图。
@@ -102,6 +106,7 @@ npx -y skills@latest add minoltaMF/create-presentations-skill --list
 - 可见文案与提示词、构图说明、备注和模型控制信息严格分离。
 - 不把 OCR 识别结果反向写成用户批准的正文。
 - 明确说明哪些区域可编辑、哪些区域保持栅格。
+- Codex 原生 PPTX 与高成本视觉生产分别使用按需 Reference，普通任务不会加载无关细节。
 
 ## 完整案例和素材包
 
@@ -129,7 +134,7 @@ python3 scripts/validate_repo.py
 
 ## 开源参考边界
 
-本项目综合参考了 [codex-ppt-skill](https://github.com/ningzimu/codex-ppt-skill)、[Bento](https://github.com/nyblnet/bento)、原生 PPTX 工具、模板跟随方案和 Render–Inspect–Revise 研究中的成熟思路。
+本项目综合参考了 [codex-ppt-skill](https://github.com/ningzimu/codex-ppt-skill)、[Bento](https://github.com/nyblnet/bento)、[ppt-master](https://github.com/hugohe3/ppt-master)、对 [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill) 的方法级研究、原生 PPTX 工具、模板跟随方案和 Render–Inspect–Revise 研究中的成熟思路。
 
 仓库不会暗中打包或执行这些上游项目。完整参考与许可证说明见 [docs/INFLUENCES.md](docs/INFLUENCES.md)。
 

@@ -3,6 +3,9 @@
   "title": "Replace with deck title",
   "slideCount": 1,
   "routes": ["native_pptx"],
+  "routeProfiles": {
+    "native_pptx": "fast-native"
+  },
   "models": {
     "planning": "configured-text-model",
     "image": "not-used"
@@ -12,12 +15,19 @@
     "actual": 0,
     "hardLimit": 1
   },
+  "production": {
+    "selectedBackend": "artifact-tool",
+    "sampleStatus": "not-used",
+    "delegation": "not-used"
+  },
   "slides": [
     {
       "id": "slide-01",
       "status": "passed",
       "attempts": 0,
-      "output": "renders/slide-01.png"
+      "output": "renders/slide-01.png",
+      "backend": "artifact-tool",
+      "qaEvidence": "renders/slide-01.png"
     }
   ],
   "outputs": [
@@ -25,7 +35,8 @@
       "route": "native_pptx",
       "path": "deck.pptx",
       "sha256": "replace-after-export",
-      "byteSize": 1
+      "byteSize": 1,
+      "editability": "editable"
     }
   ]
 }

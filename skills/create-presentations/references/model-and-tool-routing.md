@@ -30,7 +30,9 @@ For generated text-heavy slides:
 
 ## Renderers and formats
 
-- Use a native presentation API, Artifact Tool, PptxGenJS, or equivalent for editable PPTX.
+- For an ordinary editable new PPTX, prefer the direct `fast-native` profile. Use `quality-native` only when complex native detail, brand precision, or representative evidence justifies its higher startup cost.
+- In Codex, use the bundled Artifact Tool runtime for local PPTX work when it is available; read `codex-native-pptx.md` before authoring.
+- In other hosts, use the strongest available native presentation API, PptxGenJS, or equivalent for editable PPTX.
 - Use a full-slide image assembler for Visual decks.
 - Use native text plus raster visual layers for Hybrid decks.
 - Use a supplied template's real masters/layouts for template-following work.
@@ -38,6 +40,10 @@ For generated text-heavy slides:
 - Use Google Slides tooling directly when editing an existing native Google Slides deck.
 
 Do not convert through an intermediate format when it would destroy masters, editability, notes, animations, or layout fidelity.
+
+For Visual or image-heavy Hybrid production, read `visual-production.md` and record the selected backend, sample decision, per-slide state, and QA evidence when cost or auditability matters.
+
+Read `production-profiles.md` before choosing a slower native pipeline or representing an HTML export as PPTX. Route labels describe delivery contracts, not dependencies on a particular upstream Skill.
 
 ## Cost and retries
 

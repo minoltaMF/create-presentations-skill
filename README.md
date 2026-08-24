@@ -20,6 +20,10 @@ The skill does not lock you into one provider or one output style. It helps the 
 
 ![Route comparison](assets/readme/route-comparison.png)
 
+In Codex, local PPTX creation and template following use the host-provided Artifact Tool runtime directly. Visual and image-heavy Hybrid runs can record an approved sample, one selected backend, stable per-slide state, and QA provenance without inheriting a second presentation orchestrator.
+
+Native PPTX has two new-deck profiles: **Fast Native** is the default for ordinary editable decks, while **Quality Native** is reserved for briefs whose brand, vector, or typographic complexity justifies more staging and QA. Interactive HTML remains an explicit browser-first option; an image-wrapped PPTX fallback is disclosed as visually locked.
+
 ## Sixteen visual systems, one brief
 
 The gallery holds the content constant and changes composition, typography, image treatment, and emotional tone. These are original full-slide image-generation outputs—not screenshots copied from public templates.
@@ -127,6 +131,8 @@ The skill separates model roles rather than treating one model as the entire pip
 - **Visual generation:** gpt-image-2, Nano Banana / Gemini Image, Ideogram, Flux, or another available image backend.
 - **Rendering:** native presentation APIs, Artifact Tool, PptxGenJS, template-preserving tooling, or a portable HTML renderer.
 
+The installed Skill contains separate on-demand references for Codex-native PPTX work and audited visual production. They are loaded only when those routes apply.
+
 No model, API key, image provider, or renderer is bundled or silently downloaded. The agent must use what is actually available in its environment.
 
 ## Quality principles
@@ -144,7 +150,7 @@ No model, API key, image provider, or renderer is bundled or silently downloaded
 
 The installable Skill contains:
 
-- `references/` — workflow, model routing, visual systems, QA, manifest, and influence boundaries;
+- `references/` — workflow, production profiles, Codex-native PPTX, visual-production state, model routing, visual systems, QA, manifest, and influence boundaries;
 - `assets/` — reusable Brief, page-plan, visible-copy, source-ledger, and QA templates;
 - `scripts/validate_deck_manifest.py` — deterministic, provider-free delivery manifest validation;
 - `agents/openai.yaml` — Codex UI metadata.
@@ -179,7 +185,7 @@ python3 scripts/validate_repo.py
 
 ## Credits and reuse boundary
 
-This is an original, provider-neutral synthesis informed by open presentation and Agent Skill projects including [codex-ppt-skill](https://github.com/ningzimu/codex-ppt-skill), [Bento](https://github.com/nyblnet/bento), native PowerPoint tooling, template-following workflows, and Render–Inspect–Revise research.
+This is an original, provider-neutral synthesis informed by open presentation and Agent Skill projects including [codex-ppt-skill](https://github.com/ningzimu/codex-ppt-skill), [Bento](https://github.com/nyblnet/bento), [ppt-master](https://github.com/hugohe3/ppt-master), method-level review of [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill), native PowerPoint tooling, template-following workflows, and Render–Inspect–Revise research.
 
 The repository does not silently bundle those projects or their runtimes. See [Influences and licenses](docs/INFLUENCES.md).
 

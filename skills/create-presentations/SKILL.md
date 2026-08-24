@@ -1,27 +1,30 @@
 ---
 name: create-presentations
-description: Create, edit, review, repair, and deliver professional presentations across PowerPoint/PPTX, image-based decks, editable native or hybrid slides, PDF, HTML, and Google Slides workflows. Use when working from a topic, prompt, outline, article, report, research, template, existing deck, or supplied assets; when choosing between Codex, Claude, GPT, Gemini or other text models; or when using image models such as gpt-image-2, Nano Banana/Gemini Image, or another available image backend.
+description: Create, edit, review, repair, and deliver presentations in PPTX, Google Slides, image-based, hybrid, PDF, or HTML formats. Use for slide decks, PowerPoint, templates, speaker notes, or presentation audits; route Codex-native PPTX work through the bundled artifact runtime and costly visual work through recorded per-slide production.
 ---
 
 # Create Presentations
 
-Build the deck as a coherent communication artifact, not a sequence of decorated text boxes. Keep narrative, visible copy, visual direction, generation method, and delivery format distinct so each can be revised without starting over.
+Build the deck as a coherent communication artifact, not a sequence of decorated text boxes. Keep narrative, visible copy, visual direction, production state, and delivery format distinct so each can be revised without starting over.
 
 ## Route the task first
 
 1. Identify whether the user wants to create, edit, restyle, repair, review, convert, or deliver a deck.
-2. Inspect all supplied files before proposing structure. Preserve an existing deck unless an in-place edit is explicitly requested.
-3. Choose one primary production route:
+2. Inspect every supplied source and deck before proposing structure. Preserve originals unless an in-place edit is explicitly requested.
+3. Route existing native Google Slides through the available Google Slides capability. Do not round-trip through PPTX unless the user asks.
+4. Choose one primary production route:
    - **Native**: editable text, charts, tables, and shapes.
    - **Visual**: full-slide images for maximum fidelity.
    - **Hybrid**: editable key content over high-fidelity visual layers.
    - **Template**: inherit a supplied deck's masters, layouts, fonts, and spacing.
    - **HTML**: portable or interactive web presentation.
-4. Use [model-and-tool-routing.md](references/model-and-tool-routing.md) when selecting models, image backends, renderers, or file tools.
-5. Use [workflow.md](references/workflow.md) for new decks and [quality-and-delivery.md](references/quality-and-delivery.md) before delivery.
-6. Copy the reusable Brief, page-plan, visible-copy, source-ledger, QA, or manifest templates from `assets/` when the task benefits from durable working files.
+5. Read [production-profiles.md](references/production-profiles.md) to choose Fast Native, Quality Native, Template Native, Visual Locked, Hybrid, Interactive HTML, or Google Native. Default an ordinary editable new PPTX to Fast Native; upgrade only when the brief justifies the extra production cost.
+6. Read [codex-native-pptx.md](references/codex-native-pptx.md) for local PPTX work in Codex. It owns Artifact Tool runtime setup, source-deck fidelity, rendering, and host delivery rules.
+7. Read [visual-production.md](references/visual-production.md) for Visual or image-heavy Hybrid routes, especially when generation is paid, retried, or delegated.
+8. Use [model-and-tool-routing.md](references/model-and-tool-routing.md) when selecting models, image backends, renderers, or file tools; use [workflow.md](references/workflow.md) for new decks and [quality-and-delivery.md](references/quality-and-delivery.md) before delivery.
+9. Copy the reusable Brief, page-plan, visible-copy, source-ledger, QA, or manifest templates from `assets/` when the task benefits from durable working files.
 
-Do not force extra confirmation steps when the user already supplied the required decisions and authorization. Pause only for a missing choice that materially changes content, cost, external data use, or output compatibility.
+Do not force extra confirmation steps when the user already supplied the required decisions and authorization. Pause only for a missing choice that materially changes content, cost, external data use, or output compatibility. Do not install a renderer or dependency without the user's approval when the host does not already provide it.
 
 ## Build the deck
 
@@ -50,23 +53,25 @@ Read [visual-systems.md](references/visual-systems.md) when selecting or adaptin
 
 ### Produce with the selected route
 
-- For **Native**, use the best available presentation renderer and keep important text, charts, tables, and shapes editable.
-- For **Visual**, generate each full-slide image through the selected image backend, then assemble the images into PPTX without adding visible overlays.
+- For **Native**, choose Fast, Quality, or Template Native from the production-profile criteria. Use the host's strongest direct native renderer and keep important text, charts, tables, shapes, and notes editable. In Codex, prefer its bundled Artifact Tool runtime.
+- For **Visual**, generate each full-slide image through one selected backend, record the per-slide result, then assemble the approved images without adding visible overlays.
 - For **Hybrid**, preserve an approved visual master while rebuilding key text and structured data as native objects. Mark complex visual regions as raster rather than pretending they are editable.
-- For **Template**, duplicate and edit inherited layouts instead of flattening or recreating them approximately.
-- For **HTML**, keep assets portable, test offline behavior when requested, and provide a static fallback when compatibility matters.
+- For **Template**, inspect the source deck's masters and layouts, duplicate inherited structures, and edit them in place. Preserve theme parts and do not flatten the source merely for convenience.
+- For **HTML**, keep assets portable; test navigation, presenter behavior, overflow, reduced motion, and offline behavior when promised; and provide a static fallback when compatibility matters. Disclose that an image-wrapped PPTX fallback is not editable.
 
 Keep the text model and image model independent. A deck may use Claude or Codex for reasoning, another model for research or copy, and gpt-image-2 or Nano Banana for visuals.
 
+For paid, multi-route, or audited production, persist stable slide IDs, the selected backend, prompt records, source-asset mappings, attempts, state, and QA evidence. Delegation is optional: use it only when the runtime supports it and the task authorizes it; the primary agent remains responsible for source truth, selected outputs, and final QA.
+
 ### Inspect and revise
 
-Render every slide. Inspect individual pages at full size and use a contact sheet for deck-level rhythm. Fix content mismatch, overflow, wrapping, crop, alignment, weak hierarchy, repeated layouts, illegible charts, inconsistent fonts, and accidental instruction leakage.
+Render every slide. Inspect individual pages at full size and use a contact sheet for deck-level rhythm. Fix content mismatch, overflow, wrapping, crop, alignment, weak hierarchy, repeated layouts, illegible charts, inconsistent fonts, broken connectors, and accidental instruction leakage. Re-render after repairs.
 
 Prefer a human review decision or a local deterministic repair before another paid image generation. Regenerate only the affected slide unless the visual system itself changed.
 
 ### Deliver
 
-Return the requested final formats and a concise summary. Include speaker notes, sources, accessibility notes, editability limits, and a manifest when they matter. Keep temporary prompts, previews, caches, and intermediate assets out of the final delivery folder.
+Return the requested final formats and a concise summary. Include speaker notes, source blocks for externally sourced claims and assets, accessibility notes, editability limits, and a manifest when they matter. Keep temporary prompts, previews, caches, and intermediate assets out of the final delivery folder.
 
 ## Preserve visible-copy integrity
 

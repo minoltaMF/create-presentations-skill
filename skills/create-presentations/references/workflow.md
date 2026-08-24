@@ -42,7 +42,11 @@ When visual generation has meaningful cost or uncertainty, make one representati
 
 Produce pages independently while preserving deck-level tokens and stable IDs. Persist completed pages before starting retries. Keep model prompts and source notes outside the final visible deck.
 
+Choose the production profile before authoring. For an ordinary editable new PPTX, begin with Fast Native. Promote to Quality Native only when a real template, complex vector/typographic need, or representative render proves that the faster path is insufficient. Treat Interactive HTML as a browser-native route, not as an editable PPTX shortcut.
+
 For image routes, store one prompt record per slide and reuse the same model family, aspect ratio, quality level, and visual system unless a page is an intentional exception.
+
+In Codex, use the bundled Artifact Tool route for local PPTX production and template following. For Visual or image-heavy Hybrid work, record the accepted sample method, selected backend, source-asset mapping, attempts, state, selected output, and QA evidence. Delegation is optional and never transfers final source or QA ownership away from the primary agent.
 
 ## Render-Inspect-Revise
 
@@ -52,6 +56,8 @@ For image routes, store one prompt record per slide and reuse the same model fam
 4. Check notes, sources, links, fonts, charts, tables, animations, and editability.
 5. Repair locally when possible; regenerate only affected pages.
 6. Render again after every repair.
+
+For native PPTX, inspect grouped objects recursively before reporting editability and distinguish blocking failures from advisory portability warnings. For Interactive HTML, test the real browser runtime, presenter/notes behavior when present, navigation, overflow, reduced motion, and any promised offline fallback.
 
 ## Delivery
 

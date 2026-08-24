@@ -1,4 +1,6 @@
 interface:
   display_name: "Create Presentations"
-  short_description: "Plan, build, review, and deliver polished slide decks"
+  short_description: "Build native, visual, hybrid, template, and HTML decks"
   default_prompt: "Use $create-presentations to turn my materials into a polished presentation and choose the right editable or visual delivery route."
+policy:
+  allow_implicit_invocation: true

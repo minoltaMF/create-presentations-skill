@@ -77,7 +77,11 @@ The sample is optional when the user already approved the direction, compatibili
 - **Template:** inherited masters/layouts filled rather than approximately recreated.
 - **HTML:** portable presentation with an explicit offline/compatibility contract.
 
+For a new editable PPTX, Fast Native is the default. Upgrade to Quality Native only when complex brand/vector/typographic requirements or a representative render show a meaningful advantage. Interactive HTML is browser-native; any screenshot-wrapped PPTX fallback must be labeled visually locked.
+
 Persist each completed page before retrying another. Regenerate only the affected page unless the deck-level visual system changed.
+
+In Codex, route local PPTX work through the host-provided Artifact Tool runtime. For paid, delegated, or audited Visual/Hybrid work, record the selected backend, sample decision, stable slide state, selected output, and QA evidence. Delegation is optional; the primary agent retains source truth and final QA ownership.
 
 ## 8. Render–Inspect–Revise
 
